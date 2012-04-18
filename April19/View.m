@@ -47,7 +47,7 @@
 - (void) touchesBegan: (NSSet *) touches withEvent: (UIEvent *) event {
 	if (touches.count > 0) {
         
-		[UIView animateWithDuration: 1.0
+		[UIView animateWithDuration: 0.2
                               delay: 0.0
                             options: UIViewAnimationOptionCurveEaseInOut
                          animations: ^{
