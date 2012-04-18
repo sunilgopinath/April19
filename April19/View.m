@@ -18,7 +18,16 @@
         // Initialization code
         self.backgroundColor = [UIColor whiteColor];
         
-        CGRect f = CGRectMake(0, 0, 80, 40);
+        CGFloat w = 80;   //width in pixels of little view
+		CGFloat h = 40;   //height in pixels of little view
+		CGRect b = self.bounds;
+        
+		CGRect f = CGRectMake(
+                              b.origin.x + (b.size.width - w) / 2,
+                              b.origin.y + (b.size.height - h) / 2,
+                              w,
+                              h
+                              );
         littleView = [[LittleView alloc] initWithFrame: f];
         [self addSubview: littleView];
     }
