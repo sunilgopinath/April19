@@ -44,15 +44,16 @@
     return self;
 }
 
+- (void) touchesBegan: (NSSet *) touches withEvent: (UIEvent *) event {
+	littleView.backgroundColor = [UIColor greenColor];
+}
+
+- (void) touchesMoved: (NSSet *) touches withEvent: (UIEvent *) event {
+	littleView.center = [[touches anyObject] locationInView: self];
+}
+
 - (void) touchesEnded: (NSSet *) touches withEvent: (UIEvent *) event {
-    if (touches.count > 0) {
-        UITouch *touch = [touches anyObject];
-        CGPoint point = [touch locationInView: self];
-        littleView.center = point;	//Move the littleView to a new location.
-        
-        //Can combine the above three statements to
-        //littleView.center = [[touches anyObject] locationInView: self];
-    }
+	littleView.backgroundColor = [UIColor yellowColor];
 }
 
 
