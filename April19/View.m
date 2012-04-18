@@ -56,6 +56,9 @@
 	littleView.backgroundColor = [UIColor yellowColor];
 }
 
+- (void) touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
+    [super touchesCancelled:touches withEvent:event];
+}
 
 /*
  // Only override drawRect: if you perform custom drawing.
