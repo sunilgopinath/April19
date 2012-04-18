@@ -18,13 +18,23 @@
         // Initialization code
         self.backgroundColor = [UIColor whiteColor];
         
-        CGFloat w = 80;   //width in pixels of little view
-		CGFloat h = 40;   //height in pixels of little view
+        //Put the origin at the center of the big view.
 		CGRect b = self.bounds;
         
+		self.bounds = CGRectMake(
+                                 -b.size.width / 2,
+                                 -b.size.height / 2,
+                                 b.size.width,
+                                 b.size.height
+                                 );
+        
+		//Put the LittleView at the origin of the big view.
+		CGFloat w = 80;   //width in pixels of LittleView
+		CGFloat h = 40;   //height in pixels of LittleView
+        
 		CGRect f = CGRectMake(
-                              b.origin.x + (b.size.width - w) / 2,
-                              b.origin.y + (b.size.height - h) / 2,
+                              -w / 2,
+                              -h / 2,
                               w,
                               h
                               );
