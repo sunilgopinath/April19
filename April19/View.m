@@ -47,11 +47,12 @@
 - (void) touchesBegan: (NSSet *) touches withEvent: (UIEvent *) event {
 	if (touches.count > 0) {
         
-		[UIView animateWithDuration: 0.2
+		[UIView animateWithDuration: 1.0
                               delay: 0.0
                             options: UIViewAnimationOptionCurveEaseInOut
                          animations: ^{
                              //This block describes what the animation should do.
+                             [UIView setAnimationRepeatCount: 2];
                              littleView.center = [[touches anyObject] locationInView: self];
                          }
                          completion: NULL
