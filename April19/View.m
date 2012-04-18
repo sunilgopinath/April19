@@ -45,17 +45,19 @@
 }
 
 - (void) touchesBegan: (NSSet *) touches withEvent: (UIEvent *) event {
-	littleView.backgroundColor = [UIColor greenColor];
+	if (touches.count > 0) {
+        
+		[UIView animateWithDuration: 1.0
+                              delay: 0.0
+                            options: UIViewAnimationOptionCurveEaseInOut
+                         animations: ^{
+                             //This block describes what the animation should do.
+                             littleView.center = [[touches anyObject] locationInView: self];
+                         }
+                         completion: NULL
+         ];
+	}
 }
-
-- (void) touchesMoved: (NSSet *) touches withEvent: (UIEvent *) event {
-	littleView.center = [[touches anyObject] locationInView: self];
-}
-
-- (void) touchesEnded: (NSSet *) touches withEvent: (UIEvent *) event {
-	littleView.backgroundColor = [UIColor yellowColor];
-}
-
 - (void) touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
     [super touchesCancelled:touches withEvent:event];
 }
