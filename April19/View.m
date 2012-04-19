@@ -8,6 +8,7 @@
 
 #import "View.h"
 #import "PuertoRico.h"
+#import "America.h"
 
 @implementation View
 
@@ -20,10 +21,10 @@
         
 		//Don't bother with a background color--
 		//this BigView is entirely occupied by a LittleView.
-		
+		self.window.backgroundColor = [UIColor whiteColor];
 		views = [NSArray arrayWithObjects:
                  [[PuertoRico alloc] initWithFrame: self.bounds],
-                 [[PuertoRico alloc] initWithFrame: self.bounds],
+                 [[America alloc] initWithFrame: self.bounds],
                  nil
                  ];
         

@@ -19,7 +19,7 @@
     UIScreen *screen = [UIScreen mainScreen];
     view = [[View alloc] initWithFrame: screen.applicationFrame];
     self.window = [[UIWindow alloc] initWithFrame: screen.bounds];
-    self.window.backgroundColor = [UIColor blackColor];
+    self.window.backgroundColor = [UIColor whiteColor];
     
     [self.window addSubview: view];
     [self.window makeKeyAndVisible];

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0F8FE11D15403ED8000ABD6A /* rita1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0F8FE11C15403ED8000ABD6A /* rita1.jpg */; };
+		0F8FE12015403FCD000ABD6A /* America.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8FE11F15403FCD000ABD6A /* America.m */; };
+		0F8FE122154043AF000ABD6A /* 50stars.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0F8FE121154043AF000ABD6A /* 50stars.jpg */; };
 		0FD8A3E4153F85EB007CB916 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FD8A3E3153F85EB007CB916 /* UIKit.framework */; };
 		0FD8A3E6153F85EB007CB916 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FD8A3E5153F85EB007CB916 /* Foundation.framework */; };
 		0FD8A3E8153F85EB007CB916 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FD8A3E7153F85EB007CB916 /* CoreGraphics.framework */; };
@@ -23,6 +25,9 @@
 
 /* Begin PBXFileReference section */
 		0F8FE11C15403ED8000ABD6A /* rita1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = rita1.jpg; path = ../Flip/rita1.jpg; sourceTree = "<group>"; };
+		0F8FE11E15403FCD000ABD6A /* America.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = America.h; path = ../America.h; sourceTree = "<group>"; };
+		0F8FE11F15403FCD000ABD6A /* America.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = America.m; path = ../America.m; sourceTree = "<group>"; };
+		0F8FE121154043AF000ABD6A /* 50stars.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 50stars.jpg; sourceTree = "<group>"; };
 		0FD8A3DF153F85EB007CB916 /* April19.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = April19.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FD8A3E3153F85EB007CB916 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0FD8A3E5153F85EB007CB916 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -60,6 +65,7 @@
 		0FD8A3D4153F85EB007CB916 = {
 			isa = PBXGroup;
 			children = (
+				0F8FE121154043AF000ABD6A /* 50stars.jpg */,
 				0F8FE11C15403ED8000ABD6A /* rita1.jpg */,
 				0FD8A40A153FA18A007CB916 /* america.mp3 */,
 				0FD8A400153F9C31007CB916 /* AVFoundation.framework */,
@@ -90,6 +96,8 @@
 		0FD8A3E9153F85EB007CB916 /* April19 */ = {
 			isa = PBXGroup;
 			children = (
+				0F8FE11E15403FCD000ABD6A /* America.h */,
+				0F8FE11F15403FCD000ABD6A /* America.m */,
 				0FD8A3FA153F8662007CB916 /* View.h */,
 				0FD8A3FB153F8662007CB916 /* View.m */,
 				0FD8A3FD153F8698007CB916 /* PuertoRico.h */,
@@ -168,6 +176,7 @@
 				0FD8A405153F9D5E007CB916 /* Icon.png in Resources */,
 				0FD8A40B153FA18A007CB916 /* america.mp3 in Resources */,
 				0F8FE11D15403ED8000ABD6A /* rita1.jpg in Resources */,
+				0F8FE122154043AF000ABD6A /* 50stars.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +191,7 @@
 				0FD8A3F4153F85EB007CB916 /* April19AppDelegate.m in Sources */,
 				0FD8A3FC153F8662007CB916 /* View.m in Sources */,
 				0FD8A3FF153F8698007CB916 /* PuertoRico.m in Sources */,
+				0F8FE12015403FCD000ABD6A /* America.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
