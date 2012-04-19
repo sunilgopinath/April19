@@ -41,6 +41,24 @@
                               );
         littleView = [[LittleView alloc] initWithFrame: f];
         [self addSubview: littleView];
+        
+        NSString *string = @"Hello, World!";
+		UIFont *font = [UIFont systemFontOfSize: 32];
+		CGSize size = [string sizeWithFont: font];
+
+        
+        CGRect f1 = CGRectMake(
+                              self.bounds.origin.x,
+                              self.bounds.origin.y,
+                              size.width,
+                              size.height
+                              );
+        
+		label = [[UILabel alloc] initWithFrame: f1];
+		label.backgroundColor = [UIColor yellowColor];
+		label.font = font;
+		label.text = string;
+		[self addSubview: label];
     }
     return self;
 }
@@ -48,7 +66,6 @@
 - (void) touchesBegan: (NSSet *) touches withEvent: (UIEvent *) event {
 	if (touches.count > 0) {
         
-        littleView.contentStretch = CGRectMake(0.5, 0, 0, 1);
         
 		[UIView animateWithDuration: 1.0
                               delay: 0.0
@@ -59,7 +76,7 @@
                              //This block describes what the animation should do.
                              littleView.center = [[touches anyObject] locationInView: self];
                              littleView.backgroundColor = [UIColor greenColor];
-                             littleView.frame = CGRectMake(littleView.frame.origin.x,littleView.frame.origin.y, littleView.frame.size.width+50, littleView.frame.size.height);
+                             //littleView.transform = CGAffineTransformMakeScale(1, 2);
 
                          }
                          completion: NULL
