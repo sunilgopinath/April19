@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @class PuertoRico;
+@class America;
+@class TonyMaria;
 
 @interface View: UIView {
     
@@ -17,6 +19,8 @@
     
 	//index in views of the currently displayed little view: 0 or 1
 	NSUInteger index;
+    
+    TonyMaria *tonyMariaView;
 }
 
 @end

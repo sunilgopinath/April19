@@ -9,6 +9,7 @@
 #import "View.h"
 #import "PuertoRico.h"
 #import "America.h"
+#import "TonyMaria.h"
 
 @implementation View
 
@@ -29,7 +30,10 @@
                  ];
         
 		index = 0;	//Puerto Rico is the one that's initially visible.
-		[self addSubview: [views objectAtIndex: index]];
+		//[self addSubview: [views objectAtIndex: index]];
+        tonyMariaView = [[TonyMaria alloc] initWithFrame: self.bounds];
+        
+        [self addSubview: tonyMariaView];
 	}
 	return self;
 }
