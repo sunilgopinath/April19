@@ -48,6 +48,8 @@
 - (void) touchesBegan: (NSSet *) touches withEvent: (UIEvent *) event {
 	if (touches.count > 0) {
         
+        littleView.contentStretch = CGRectMake(0.5, 0, 0, 1);
+        
 		[UIView animateWithDuration: 1.0
                               delay: 0.0
                             options: UIViewAnimationOptionCurveEaseInOut
@@ -57,7 +59,9 @@
                              //This block describes what the animation should do.
                              littleView.center = [[touches anyObject] locationInView: self];
                              littleView.backgroundColor = [UIColor greenColor];
-                             littleView.transform = CGAffineTransformMakeRotation(-90 * M_PI / 180);                         }
+                             littleView.frame = CGRectMake(littleView.frame.origin.x,littleView.frame.origin.y, littleView.frame.size.width+50, littleView.frame.size.height);
+
+                         }
                          completion: NULL
          ];
 	}
