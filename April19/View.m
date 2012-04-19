@@ -42,9 +42,9 @@
         littleView = [[LittleView alloc] initWithFrame: f];
         //[self addSubview: littleView];
         
-        NSString *text = @"I like to be in america ";
-        UIFont *font = [UIFont italicSystemFontOfSize: b.size.height/3];
-        CGSize size = [text sizeWithFont: font];
+        NSString *america = @"America";
+        UIFont *font = [UIFont italicSystemFontOfSize: b.size.height/5];
+        CGSize size = [america sizeWithFont: font];
 
         
         CGRect f1 = CGRectMake(
@@ -58,8 +58,27 @@
         label.font = font;
         label.backgroundColor = [UIColor clearColor];
         label.textColor = [UIColor whiteColor];
-        label.text = text;
+        label.text = america;
         [self addSubview: label];
+        
+        
+        NSString *puertoRico = @"Puerto Rico ";
+        UIFont *fontPuertoRico = [UIFont italicSystemFontOfSize: b.size.height/5];
+        CGSize sizePuertoRico = [puertoRico sizeWithFont: fontPuertoRico];
+        
+        CGRect f2 = CGRectMake(
+                               self.bounds.origin.x,
+                               self.bounds.origin.y/2,
+                               sizePuertoRico.width,
+                               sizePuertoRico.height
+                               );
+        
+        label2 = [[UILabel alloc] initWithFrame: f2];
+        label2.font = font;
+        label2.backgroundColor = [UIColor clearColor];
+        label2.textColor = [UIColor redColor];
+        label2.text = puertoRico;
+        [self addSubview: label2];
     }
     return self;
 }
@@ -104,6 +123,13 @@
                                                      -label.bounds.size.width / 2,
                                                      self.bounds.size.height / 2
                                                      );
+                          label.alpha = 0.0;	//0.0 is transparent, 1.0 is opaque
+                          label2.center = CGPointMake(
+                                                     -label2.bounds.size.width / 2,
+                                                     self.bounds.size.height / 2
+                                                     );
+                          label2.alpha = 0.0;
+
                       }
                       completion: NULL
       ];

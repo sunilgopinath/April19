@@ -12,7 +12,8 @@
 
 @interface View: UIView {
     LittleView *littleView;
-    UILabel *label; 
+    UILabel *label;
+    UILabel *label2; 
 }
 
 @end
