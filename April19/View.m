@@ -10,7 +10,7 @@
 #import "LittleView.h"
 
 @implementation View
-BOOL bo;
+
 
 - (id) initWithFrame: (CGRect) frame
 {
@@ -18,27 +18,11 @@ BOOL bo;
     if (self) {
         // Initialization code
         self.backgroundColor = [UIColor whiteColor];
-        bo = YES;
-        //Put the origin at the center of the big view.
-		CGRect b = self.bounds;
         
-		self.bounds = CGRectMake(
-                                 -b.size.width / 2,
-                                 -b.size.height / 2,
-                                 b.size.width,
-                                 b.size.height
-                                 );
+        // Initialization code
+        self.backgroundColor = [UIColor whiteColor];
         
-		//Put the LittleView at the origin of the big view.
-		CGFloat w = 80;   //width in pixels of LittleView
-		CGFloat h = 40;   //height in pixels of LittleView
-        
-		CGRect f = CGRectMake(
-                              -w / 2,
-                              -h / 2,
-                              w,
-                              h
-                              );
+        CGRect f = CGRectMake(0, 0, 80, 40);
         littleView = [[LittleView alloc] initWithFrame: f];
         [self addSubview: littleView];
     }
@@ -55,8 +39,15 @@ BOOL bo;
                                         | UIViewAnimationOptionBeginFromCurrentState
                          animations: ^{
                              //This block describes what the animation should do.
-                             littleView.center = [[touches anyObject] locationInView: self];
-                             littleView.backgroundColor = (bo = !bo) ? [UIColor blueColor] : [UIColor greenColor];
+                             CGPoint p = [[touches anyObject] locationInView: self];
+                             CGFloat h = self.bounds.size.height;
+                             
+                             littleView.backgroundColor = [UIColor
+                                                           colorWithRed: 0.0
+                                                           green: p.y / h		//green near the bottom
+                                                           blue: (h - p.y) / h	//blue near the top
+                                                           alpha: 1.0
+                                                           ];
                          }
                          completion: NULL
          ];
