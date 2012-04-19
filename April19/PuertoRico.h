@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PuertoRico : UIView
+@interface PuertoRico : UIView {
+    UILabel *bernardo;
+    UILabel *anita;
+}
 
 @end

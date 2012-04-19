@@ -18,7 +18,7 @@
 		textView = [[UITextView alloc] initWithFrame: self.bounds];
 		textView.textColor = [UIColor whiteColor];
         textView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"introductionbackground.jpg"]];
-		textView.font = [UIFont fontWithName: @"Georgia" size: 12];
+		textView.font = [UIFont fontWithName: @"Georgia" size: 16];
 		textView.editable = NO;	//Don't pop up a keyboard.
 		NSString *fullpath = [[NSBundle mainBundle] pathForResource:@"romeo" ofType:@"txt"];  
         if (fullpath) {  

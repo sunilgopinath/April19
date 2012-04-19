@@ -42,7 +42,7 @@
         NSString *text = @"HELP TONY AND MARIA";
         
         CGRect b = self.bounds;
-        UIFont *font = [UIFont italicSystemFontOfSize: b.size.height];
+        UIFont *font = [UIFont italicSystemFontOfSize: b.size.height/2];
         CGSize size = [text sizeWithFont: font];
         
         CGRect t = CGRectMake(
@@ -55,7 +55,7 @@
         label = [[UILabel alloc] initWithFrame: t];
         label.font = font;
         label.backgroundColor = [UIColor clearColor];
-        label.textColor = [UIColor whiteColor];
+        label.textColor = [UIColor blackColor];
         label.text = text;
         [self addSubview: label];
         
@@ -92,8 +92,8 @@
 - (void) drawRect: (CGRect) rect
 {
     // Drawing code
-    [UIView animateWithDuration: 5
-                          delay: 1
+    [UIView animateWithDuration: 20
+                          delay: 5
                         options: UIViewAnimationOptionCurveLinear
                      animations: ^{
                          //Move the label far enough to the left

@@ -17,6 +17,44 @@
 	if (self) {
 		// Initialization code
 		self.backgroundColor = [UIColor whiteColor];
+        
+        
+        NSString *textBernardo = @"I'd like to go back to San Juan. ";
+        
+        CGRect b = self.bounds;
+        UIFont *font = [UIFont italicSystemFontOfSize: b.size.height/9];
+        CGSize size = [textBernardo sizeWithFont: font];
+        
+        CGRect f = CGRectMake(
+                              b.size.width,
+                              0,
+                              size.width,
+                              size.height
+                              );
+        
+        bernardo = [[UILabel alloc] initWithFrame: f];
+        bernardo.font = font;
+        bernardo.backgroundColor = [UIColor clearColor];
+        bernardo.textColor = [UIColor whiteColor];
+        bernardo.text = textBernardo;
+        [self addSubview: bernardo];
+        
+        NSString *textAnita = @"I know a boat you can get on! ";
+        CGRect fAnita = CGRectMake(
+                              -b.origin.x/2,
+                              b.origin.y,
+                              size.width,
+                              size.height
+                              );
+        
+        anita = [[UILabel alloc] initWithFrame: fAnita];
+        UIFont *fontAnita = [UIFont italicSystemFontOfSize: b.size.height/18];
+        anita.font = fontAnita;
+        anita.backgroundColor = [UIColor clearColor];
+        anita.textColor = [UIColor whiteColor];
+        anita.text = textAnita;
+        anita.alpha = 0.0;
+        [self addSubview: anita];
 	}
 	return self;
 }
@@ -108,6 +146,37 @@
                                 );
     
 	[image drawAtPoint: point];
+    
+    // Drawing code
+    [UIView animateWithDuration: 12
+                          delay: 5
+                        options: UIViewAnimationOptionCurveLinear
+                     animations: ^{
+                         //Move the label far enough to the left
+                         //so that it's out of the View.
+                         bernardo.center = CGPointMake(
+                                                    -bernardo.bounds.size.width / 2,
+                                                    self.bounds.size.height / 2
+                                                    );
+                     }
+                     completion: NULL
+     ];
+    
+    // Drawing code
+    [UIView animateWithDuration: 12
+                          delay: 19
+                        options: UIViewAnimationOptionCurveLinear
+                     animations: ^{
+                         //Move the label far enough to the left
+                         //so that it's out of the View.
+                         anita.center = CGPointMake(
+                                                       anita.bounds.size.width /2,
+                                                       self.bounds.size.height / 2
+                                                       );
+                         anita.alpha = 1.0;
+                     }
+                     completion: NULL
+     ];
 }
 
 

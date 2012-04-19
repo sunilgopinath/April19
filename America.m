@@ -17,7 +17,7 @@
 		// Initialization code
 		self.backgroundColor = [UIColor whiteColor];
         
-        NSString *text = @"Womb to tomb!";
+        NSString *text = @"Womb to tomb! ";
         
         CGRect b = self.bounds;
         UIFont *font = [UIFont italicSystemFontOfSize: b.size.height/7];
