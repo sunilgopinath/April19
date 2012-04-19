@@ -95,7 +95,7 @@
 	CGContextFillPath(c);
     
     //The actor George C. Scott played General George S. Patton (1970).
-	UIImage *image = [UIImage imageNamed: @"rita1.jpg"];	//100 by 100
+	UIImage *image = [UIImage imageNamed: @"bernardo.jpg"];	//100 by 100
 	if (image == nil) {
 		NSLog(@"could not find the image");
 		return;

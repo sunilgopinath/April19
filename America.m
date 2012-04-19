@@ -46,17 +46,27 @@
 		return;
 	}
     
-	//upper left corner of image
-	CGPoint point = CGPointMake(
-                                (w - image.size.width) / 2,
-                                0
-                                );
     //[image drawInRect:CGRectMake(w-image.size.width,0,image.size.width,image.size.height)];
 	//[image drawAtPoint: point];
     UIImage * portraitImage = [[UIImage alloc] initWithCGImage: image.CGImage
                                                          scale: 1.0
                                                    orientation: UIImageOrientationLeft];
     [portraitImage drawInRect:CGRectMake(6*w/13,0,image.size.height,image.size.height)];
+    
+    //The actor George C. Scott played General George S. Patton (1970).
+	UIImage *riff = [UIImage imageNamed: @"riff.jpg"];	//100 by 100
+	if (image == nil) {
+		NSLog(@"could not find the image");
+		return;
+	}
+    
+	//upper left corner of image
+	CGPoint point = CGPointMake(
+                                (w - riff.size.width) / 2,
+                                h - riff.size.height - 20
+                                );
+    
+	[riff drawAtPoint: point];
 
 }
 

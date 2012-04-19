@@ -28,7 +28,7 @@
                  nil
                  ];
         
-		index = 0;	//LittleView0 is the one that's initially visible.
+		index = 0;	//Puerto Rico is the one that's initially visible.
 		[self addSubview: [views objectAtIndex: index]];
 	}
 	return self;
@@ -51,7 +51,7 @@
 	[UIView transitionFromView: [views objectAtIndex: index]
                         toView: [views objectAtIndex: newIndex]
                       duration: 2.25
-                       options: UIViewAnimationOptionTransitionCrossDissolve
+                       options: UIViewAnimationOptionTransitionFlipFromLeft
                     completion: NULL
      ];
     
