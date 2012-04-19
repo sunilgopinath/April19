@@ -19,10 +19,26 @@
         // Initialization code
         self.backgroundColor = [UIColor whiteColor];
         
-        // Initialization code
-        self.backgroundColor = [UIColor whiteColor];
+        //Put the origin at the center of the big view.
+		CGRect b = self.bounds;
         
-        CGRect f = CGRectMake(0, 0, 80, 40);
+		self.bounds = CGRectMake(
+                                 -b.size.width / 2,
+                                 -b.size.height / 2,
+                                 b.size.width,
+                                 b.size.height
+                                 );
+        
+		//Put the LittleView at the origin of the big view.
+		CGFloat w = 80;   //width in pixels of LittleView
+		CGFloat h = 40;   //height in pixels of LittleView
+        
+		CGRect f = CGRectMake(
+                              -w / 2,
+                              -h / 2,
+                              w,
+                              h
+                              );
         littleView = [[LittleView alloc] initWithFrame: f];
         [self addSubview: littleView];
     }
@@ -39,16 +55,9 @@
                                         | UIViewAnimationOptionBeginFromCurrentState
                          animations: ^{
                              //This block describes what the animation should do.
-                             CGPoint p = [[touches anyObject] locationInView: self];
-                             CGFloat h = self.bounds.size.height;
-                             
-                             littleView.backgroundColor = [UIColor
-                                                           colorWithRed: 0.0
-                                                           green: p.y / h		//green near the bottom
-                                                           blue: (h - p.y) / h	//blue near the top
-                                                           alpha: 1.0
-                                                           ];
-                         }
+                             littleView.center = [[touches anyObject] locationInView: self];
+                             littleView.backgroundColor = [UIColor greenColor];
+                             littleView.transform = CGAffineTransformMakeRotation(-90 * M_PI / 180);                         }
                          completion: NULL
          ];
 	}
