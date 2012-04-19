@@ -8,12 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@class LittleView;
+@class PuertoRico;
 
 @interface View: UIView {
-    LittleView *littleView;
-    UILabel *label;
-    UILabel *label2; 
+    
+    //holds the two subviews we transtion between
+    NSArray *views;
+    
+	//index in views of the currently displayed little view: 0 or 1
+	NSUInteger index;
 }
 
 @end

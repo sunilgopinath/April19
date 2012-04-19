@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F8FE11D15403ED8000ABD6A /* rita1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0F8FE11C15403ED8000ABD6A /* rita1.jpg */; };
 		0FD8A3E4153F85EB007CB916 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FD8A3E3153F85EB007CB916 /* UIKit.framework */; };
 		0FD8A3E6153F85EB007CB916 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FD8A3E5153F85EB007CB916 /* Foundation.framework */; };
 		0FD8A3E8153F85EB007CB916 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FD8A3E7153F85EB007CB916 /* CoreGraphics.framework */; };
@@ -14,14 +15,14 @@
 		0FD8A3F0153F85EB007CB916 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FD8A3EF153F85EB007CB916 /* main.m */; };
 		0FD8A3F4153F85EB007CB916 /* April19AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FD8A3F3153F85EB007CB916 /* April19AppDelegate.m */; };
 		0FD8A3FC153F8662007CB916 /* View.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FD8A3FB153F8662007CB916 /* View.m */; };
-		0FD8A3FF153F8698007CB916 /* LittleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FD8A3FE153F8698007CB916 /* LittleView.m */; };
+		0FD8A3FF153F8698007CB916 /* PuertoRico.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FD8A3FE153F8698007CB916 /* PuertoRico.m */; };
 		0FD8A401153F9C31007CB916 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FD8A400153F9C31007CB916 /* AVFoundation.framework */; };
-		0FD8A404153F9D5E007CB916 /* gone.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0FD8A402153F9D5E007CB916 /* gone.mp3 */; };
 		0FD8A405153F9D5E007CB916 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FD8A403153F9D5E007CB916 /* Icon.png */; };
 		0FD8A40B153FA18A007CB916 /* america.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0FD8A40A153FA18A007CB916 /* america.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F8FE11C15403ED8000ABD6A /* rita1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = rita1.jpg; path = ../Flip/rita1.jpg; sourceTree = "<group>"; };
 		0FD8A3DF153F85EB007CB916 /* April19.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = April19.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FD8A3E3153F85EB007CB916 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0FD8A3E5153F85EB007CB916 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -34,10 +35,9 @@
 		0FD8A3F3153F85EB007CB916 /* April19AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = April19AppDelegate.m; sourceTree = "<group>"; };
 		0FD8A3FA153F8662007CB916 /* View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = View.h; sourceTree = "<group>"; };
 		0FD8A3FB153F8662007CB916 /* View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = View.m; sourceTree = "<group>"; };
-		0FD8A3FD153F8698007CB916 /* LittleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LittleView.h; sourceTree = "<group>"; };
-		0FD8A3FE153F8698007CB916 /* LittleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LittleView.m; sourceTree = "<group>"; };
+		0FD8A3FD153F8698007CB916 /* PuertoRico.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PuertoRico.h; sourceTree = "<group>"; };
+		0FD8A3FE153F8698007CB916 /* PuertoRico.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PuertoRico.m; sourceTree = "<group>"; };
 		0FD8A400153F9C31007CB916 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		0FD8A402153F9D5E007CB916 /* gone.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gone.mp3; sourceTree = "<group>"; };
 		0FD8A403153F9D5E007CB916 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
 		0FD8A40A153FA18A007CB916 /* america.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = america.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -60,8 +60,8 @@
 		0FD8A3D4153F85EB007CB916 = {
 			isa = PBXGroup;
 			children = (
+				0F8FE11C15403ED8000ABD6A /* rita1.jpg */,
 				0FD8A40A153FA18A007CB916 /* america.mp3 */,
-				0FD8A402153F9D5E007CB916 /* gone.mp3 */,
 				0FD8A400153F9C31007CB916 /* AVFoundation.framework */,
 				0FD8A3E9153F85EB007CB916 /* April19 */,
 				0FD8A3E2153F85EB007CB916 /* Frameworks */,
@@ -92,8 +92,8 @@
 			children = (
 				0FD8A3FA153F8662007CB916 /* View.h */,
 				0FD8A3FB153F8662007CB916 /* View.m */,
-				0FD8A3FD153F8698007CB916 /* LittleView.h */,
-				0FD8A3FE153F8698007CB916 /* LittleView.m */,
+				0FD8A3FD153F8698007CB916 /* PuertoRico.h */,
+				0FD8A3FE153F8698007CB916 /* PuertoRico.m */,
 				0FD8A3F2153F85EB007CB916 /* April19AppDelegate.h */,
 				0FD8A3F3153F85EB007CB916 /* April19AppDelegate.m */,
 				0FD8A3EA153F85EB007CB916 /* Supporting Files */,
@@ -165,9 +165,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FD8A3EE153F85EB007CB916 /* InfoPlist.strings in Resources */,
-				0FD8A404153F9D5E007CB916 /* gone.mp3 in Resources */,
 				0FD8A405153F9D5E007CB916 /* Icon.png in Resources */,
 				0FD8A40B153FA18A007CB916 /* america.mp3 in Resources */,
+				0F8FE11D15403ED8000ABD6A /* rita1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,7 +181,7 @@
 				0FD8A3F0153F85EB007CB916 /* main.m in Sources */,
 				0FD8A3F4153F85EB007CB916 /* April19AppDelegate.m in Sources */,
 				0FD8A3FC153F8662007CB916 /* View.m in Sources */,
-				0FD8A3FF153F8698007CB916 /* LittleView.m in Sources */,
+				0FD8A3FF153F8698007CB916 /* PuertoRico.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +285,7 @@
 				0FD8A3F9153F85EB007CB916 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

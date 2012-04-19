@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LittleView : UIView
+@interface PuertoRico : UIView
 
 @end
