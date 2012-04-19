@@ -58,6 +58,8 @@
         label.textColor = [UIColor whiteColor];
         label.text = text;
         [self addSubview: label];
+        
+        
     }
     return self;
 }

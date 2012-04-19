@@ -18,6 +18,8 @@
 		0F8FE138154059A5000ABD6A /* maria.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F8FE137154059A5000ABD6A /* maria.png */; };
 		0F8FE13B15405C92000ABD6A /* Tony.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8FE13A15405C92000ABD6A /* Tony.m */; };
 		0F8FE13D154065FA000ABD6A /* tony.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F8FE13C154065FA000ABD6A /* tony.png */; };
+		0F8FE14015406E7A000ABD6A /* Introduction.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8FE13F15406E7A000ABD6A /* Introduction.m */; };
+		0F8FE1421540749D000ABD6A /* romeo.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0F8FE1411540749D000ABD6A /* romeo.txt */; };
 		0FD8A3E4153F85EB007CB916 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FD8A3E3153F85EB007CB916 /* UIKit.framework */; };
 		0FD8A3E6153F85EB007CB916 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FD8A3E5153F85EB007CB916 /* Foundation.framework */; };
 		0FD8A3E8153F85EB007CB916 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FD8A3E7153F85EB007CB916 /* CoreGraphics.framework */; };
@@ -47,6 +49,9 @@
 		0F8FE13915405C92000ABD6A /* Tony.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tony.h; sourceTree = "<group>"; };
 		0F8FE13A15405C92000ABD6A /* Tony.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tony.m; sourceTree = "<group>"; };
 		0F8FE13C154065FA000ABD6A /* tony.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tony.png; sourceTree = "<group>"; };
+		0F8FE13E15406E7A000ABD6A /* Introduction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Introduction.h; sourceTree = "<group>"; };
+		0F8FE13F15406E7A000ABD6A /* Introduction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Introduction.m; sourceTree = "<group>"; };
+		0F8FE1411540749D000ABD6A /* romeo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = romeo.txt; path = ../TextView/romeo.txt; sourceTree = "<group>"; };
 		0FD8A3DF153F85EB007CB916 /* April19.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = April19.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FD8A3E3153F85EB007CB916 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0FD8A3E5153F85EB007CB916 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -84,6 +89,7 @@
 		0FD8A3D4153F85EB007CB916 = {
 			isa = PBXGroup;
 			children = (
+				0F8FE1411540749D000ABD6A /* romeo.txt */,
 				0F8FE13C154065FA000ABD6A /* tony.png */,
 				0F8FE137154059A5000ABD6A /* maria.png */,
 				0F8FE135154053B6000ABD6A /* westsidestorybackground1.png */,
@@ -120,6 +126,8 @@
 		0FD8A3E9153F85EB007CB916 /* April19 */ = {
 			isa = PBXGroup;
 			children = (
+				0F8FE13E15406E7A000ABD6A /* Introduction.h */,
+				0F8FE13F15406E7A000ABD6A /* Introduction.m */,
 				0F8FE13915405C92000ABD6A /* Tony.h */,
 				0F8FE13A15405C92000ABD6A /* Tony.m */,
 				0F8FE12A15404F63000ABD6A /* Maria.h */,
@@ -212,6 +220,7 @@
 				0F8FE136154053B6000ABD6A /* westsidestorybackground1.png in Resources */,
 				0F8FE138154059A5000ABD6A /* maria.png in Resources */,
 				0F8FE13D154065FA000ABD6A /* tony.png in Resources */,
+				0F8FE1421540749D000ABD6A /* romeo.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +239,7 @@
 				0F8FE12915404F2B000ABD6A /* TonyMaria.m in Sources */,
 				0F8FE12C15404F63000ABD6A /* Maria.m in Sources */,
 				0F8FE13B15405C92000ABD6A /* Tony.m in Sources */,
+				0F8FE14015406E7A000ABD6A /* Introduction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

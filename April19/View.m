@@ -10,6 +10,7 @@
 #import "PuertoRico.h"
 #import "America.h"
 #import "TonyMaria.h"
+#import "Introduction.h"
 
 @implementation View
 
@@ -24,6 +25,7 @@
 		//this BigView is entirely occupied by a LittleView.
 		self.window.backgroundColor = [UIColor whiteColor];
 		views = [NSArray arrayWithObjects:
+                 [[Introduction alloc] initWithFrame: self.bounds],
                  [[TonyMaria alloc] initWithFrame: self.bounds],
                  [[PuertoRico alloc] initWithFrame: self.bounds],
                  [[America alloc] initWithFrame: self.bounds],
@@ -67,37 +69,57 @@
 
 - (void) swipe: (UISwipeGestureRecognizer *) recognizer {
 	//CGPoint p = [recognizer locationInView: self];
-    
-	NSString *direction = @"unknown";
+    	//NSString *direction = @"unknown";
 	if (recognizer.direction == UISwipeGestureRecognizerDirectionRight) {
-		direction = @"→";
-        NSUInteger newIndex = index;	//toggle the index
-        if(newIndex < 2) {
+		NSLog(@"→");
+        	//toggle the index
+        NSUInteger newIndex = index;
+        if(index < views.count-1) {
             newIndex++;
         } else {
             newIndex = 0;
         }
-        
+        NSLog(@"index is %i and newIndex is %i", index, newIndex);
         [UIView transitionFromView: [views objectAtIndex: index]
                             toView: [views objectAtIndex: newIndex]
                           duration: 2.25
                            options: UIViewAnimationOptionTransitionFlipFromLeft
                         completion: NULL
          ];
-        if(index == 0 || index == 1) {
+        if(index < views.count-1) {
             index++;
-        }
-        else if(index == 2) {
+        } else {
             index = 0;
         }
 	} else if (recognizer.direction == UISwipeGestureRecognizerDirectionLeft) {
-		direction = @"←";
+		NSLog(@"←");
+        NSUInteger newIndex = index;
+        if(index > 1) {
+            newIndex--;
+        } else {
+            newIndex = 3;
+        }
 	} else if (recognizer.direction == UISwipeGestureRecognizerDirectionUp) {
-		direction = @"↑";
+		NSLog(@"↑");
+        [UIView transitionFromView: [views objectAtIndex: index]
+                            toView: [views objectAtIndex: 0]
+                          duration: 2.25
+                           options: UIViewAnimationOptionTransitionFlipFromLeft
+                        completion: NULL
+         ];
+        if(index > 1) {
+            
+        }
 	} else if (recognizer.direction == UISwipeGestureRecognizerDirectionDown) {
-		direction = @"↓";
+		NSLog(@"↓");
+        [UIView transitionFromView: [views objectAtIndex: index]
+                            toView: [views objectAtIndex: views.count-1]
+                          duration: 2.25
+                           options: UIViewAnimationOptionTransitionFlipFromLeft
+                        completion: NULL
+         ];
 	}
-
+    
 }
 
 /*
