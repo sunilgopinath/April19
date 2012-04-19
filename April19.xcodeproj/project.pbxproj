@@ -15,6 +15,9 @@
 		0FD8A3F4153F85EB007CB916 /* April19AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FD8A3F3153F85EB007CB916 /* April19AppDelegate.m */; };
 		0FD8A3FC153F8662007CB916 /* View.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FD8A3FB153F8662007CB916 /* View.m */; };
 		0FD8A3FF153F8698007CB916 /* LittleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FD8A3FE153F8698007CB916 /* LittleView.m */; };
+		0FD8A401153F9C31007CB916 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FD8A400153F9C31007CB916 /* AVFoundation.framework */; };
+		0FD8A404153F9D5E007CB916 /* gone.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0FD8A402153F9D5E007CB916 /* gone.mp3 */; };
+		0FD8A405153F9D5E007CB916 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FD8A403153F9D5E007CB916 /* Icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		0FD8A3FB153F8662007CB916 /* View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = View.m; sourceTree = "<group>"; };
 		0FD8A3FD153F8698007CB916 /* LittleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LittleView.h; sourceTree = "<group>"; };
 		0FD8A3FE153F8698007CB916 /* LittleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LittleView.m; sourceTree = "<group>"; };
+		0FD8A400153F9C31007CB916 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		0FD8A402153F9D5E007CB916 /* gone.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gone.mp3; sourceTree = "<group>"; };
+		0FD8A403153F9D5E007CB916 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FD8A401153F9C31007CB916 /* AVFoundation.framework in Frameworks */,
 				0FD8A3E4153F85EB007CB916 /* UIKit.framework in Frameworks */,
 				0FD8A3E6153F85EB007CB916 /* Foundation.framework in Frameworks */,
 				0FD8A3E8153F85EB007CB916 /* CoreGraphics.framework in Frameworks */,
@@ -51,6 +58,8 @@
 		0FD8A3D4153F85EB007CB916 = {
 			isa = PBXGroup;
 			children = (
+				0FD8A402153F9D5E007CB916 /* gone.mp3 */,
+				0FD8A400153F9C31007CB916 /* AVFoundation.framework */,
 				0FD8A3E9153F85EB007CB916 /* April19 */,
 				0FD8A3E2153F85EB007CB916 /* Frameworks */,
 				0FD8A3E0153F85EB007CB916 /* Products */,
@@ -92,6 +101,7 @@
 		0FD8A3EA153F85EB007CB916 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0FD8A403153F9D5E007CB916 /* Icon.png */,
 				0FD8A3EB153F85EB007CB916 /* April19-Info.plist */,
 				0FD8A3EC153F85EB007CB916 /* InfoPlist.strings */,
 				0FD8A3EF153F85EB007CB916 /* main.m */,
@@ -152,6 +162,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FD8A3EE153F85EB007CB916 /* InfoPlist.strings in Resources */,
+				0FD8A404153F9D5E007CB916 /* gone.mp3 in Resources */,
+				0FD8A405153F9D5E007CB916 /* Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
