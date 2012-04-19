@@ -19,11 +19,13 @@
         self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"westsidestorybackground1.png"]];
         
         // ADD MARIA TO THE VIEW
-        UIImage *maria = [UIImage imageNamed: @"maria.png"];	//100 by 100
+        UIImage *maria = [UIImage imageNamed: @"maria.png"];
         CGRect f = CGRectMake(0, 0, maria.size.width, maria.size.width);
         mariaView = [[Maria alloc] initWithFrame: f];
         mariaView.backgroundColor = [UIColor colorWithPatternImage:maria];
         [self addSubview: mariaView];
+        
+        // ADD TONY TO THE VIEW
         
         // ADD TEXT TO VIEW 
         //Trailing blank to avoid cutting off last letter

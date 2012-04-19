@@ -24,16 +24,17 @@
 		//this BigView is entirely occupied by a LittleView.
 		self.window.backgroundColor = [UIColor whiteColor];
 		views = [NSArray arrayWithObjects:
+                 [[TonyMaria alloc] initWithFrame: self.bounds],
                  [[PuertoRico alloc] initWithFrame: self.bounds],
                  [[America alloc] initWithFrame: self.bounds],
                  nil
                  ];
         
 		index = 0;	//Puerto Rico is the one that's initially visible.
-		//[self addSubview: [views objectAtIndex: index]];
-        tonyMariaView = [[TonyMaria alloc] initWithFrame: self.bounds];
+		[self addSubview: [views objectAtIndex: index]];
+        //tonyMariaView = [[TonyMaria alloc] initWithFrame: self.bounds];
         
-        [self addSubview: tonyMariaView];
+        //[self addSubview: tonyMariaView];
 	}
 	return self;
 }
@@ -50,7 +51,12 @@
      left.
      */
     
-	NSUInteger newIndex = 1 - index;	//toggle the index
+	NSUInteger newIndex = index;	//toggle the index
+    if(newIndex < 2) {
+        newIndex++;
+    } else {
+        newIndex = 0;
+    }
     
 	[UIView transitionFromView: [views objectAtIndex: index]
                         toView: [views objectAtIndex: newIndex]
@@ -58,8 +64,13 @@
                        options: UIViewAnimationOptionTransitionFlipFromLeft
                     completion: NULL
      ];
-    
-	index = newIndex;
+    if(index == 0 || index == 1) {
+        index++;
+    }
+    else if(index == 2) {
+        index = 0;
+    }
+
 }
 - (void) touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
     [super touchesCancelled:touches withEvent:event];

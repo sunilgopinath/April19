@@ -16,6 +16,7 @@
 		0F8FE12C15404F63000ABD6A /* Maria.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8FE12B15404F63000ABD6A /* Maria.m */; };
 		0F8FE136154053B6000ABD6A /* westsidestorybackground1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F8FE135154053B6000ABD6A /* westsidestorybackground1.png */; };
 		0F8FE138154059A5000ABD6A /* maria.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F8FE137154059A5000ABD6A /* maria.png */; };
+		0F8FE13B15405C92000ABD6A /* Tony.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8FE13A15405C92000ABD6A /* Tony.m */; };
 		0FD8A3E4153F85EB007CB916 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FD8A3E3153F85EB007CB916 /* UIKit.framework */; };
 		0FD8A3E6153F85EB007CB916 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FD8A3E5153F85EB007CB916 /* Foundation.framework */; };
 		0FD8A3E8153F85EB007CB916 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FD8A3E7153F85EB007CB916 /* CoreGraphics.framework */; };
@@ -42,6 +43,8 @@
 		0F8FE12B15404F63000ABD6A /* Maria.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Maria.m; sourceTree = "<group>"; };
 		0F8FE135154053B6000ABD6A /* westsidestorybackground1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = westsidestorybackground1.png; sourceTree = "<group>"; };
 		0F8FE137154059A5000ABD6A /* maria.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maria.png; sourceTree = "<group>"; };
+		0F8FE13915405C92000ABD6A /* Tony.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tony.h; sourceTree = "<group>"; };
+		0F8FE13A15405C92000ABD6A /* Tony.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tony.m; sourceTree = "<group>"; };
 		0FD8A3DF153F85EB007CB916 /* April19.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = April19.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FD8A3E3153F85EB007CB916 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0FD8A3E5153F85EB007CB916 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -114,6 +117,8 @@
 		0FD8A3E9153F85EB007CB916 /* April19 */ = {
 			isa = PBXGroup;
 			children = (
+				0F8FE13915405C92000ABD6A /* Tony.h */,
+				0F8FE13A15405C92000ABD6A /* Tony.m */,
 				0F8FE12A15404F63000ABD6A /* Maria.h */,
 				0F8FE12B15404F63000ABD6A /* Maria.m */,
 				0F8FE12715404F2A000ABD6A /* TonyMaria.h */,
@@ -220,6 +225,7 @@
 				0F8FE12015403FCD000ABD6A /* America.m in Sources */,
 				0F8FE12915404F2B000ABD6A /* TonyMaria.m in Sources */,
 				0F8FE12C15404F63000ABD6A /* Maria.m in Sources */,
+				0F8FE13B15405C92000ABD6A /* Tony.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
