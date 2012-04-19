@@ -50,9 +50,10 @@
 		[UIView animateWithDuration: 1.0
                               delay: 0.0
                             options: UIViewAnimationOptionCurveEaseInOut
+                                        | UIViewAnimationOptionAllowUserInteraction
+                                        | UIViewAnimationOptionBeginFromCurrentState
                          animations: ^{
                              //This block describes what the animation should do.
-                             [UIView setAnimationRepeatCount: 2];
                              littleView.center = [[touches anyObject] locationInView: self];
                          }
                          completion: NULL
