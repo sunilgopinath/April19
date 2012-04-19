@@ -12,9 +12,10 @@
 
 - (id)initWithFrame:(CGRect)frame
 {
-    self = [super initWithFrame:frame];
+    self = [super initWithFrame: frame];
     if (self) {
         // Initialization code
+        self.backgroundColor = [UIColor blackColor];
     }
     return self;
 }

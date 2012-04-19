@@ -14,13 +14,12 @@
 
 @interface View: UIView {
     
-    //holds the two subviews we transtion between
+    //holds the three subviews we transtion between
     NSArray *views;
-    
 	//index in views of the currently displayed little view: 0 or 1
 	NSUInteger index;
-    
-    TonyMaria *tonyMariaView;
+
+
 }
 
 @end

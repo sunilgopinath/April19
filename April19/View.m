@@ -35,45 +35,69 @@
         //tonyMariaView = [[TonyMaria alloc] initWithFrame: self.bounds];
         
         //[self addSubview: tonyMariaView];
+        
+        UISwipeGestureRecognizer *recognizer = [[UISwipeGestureRecognizer alloc]
+                                                initWithTarget: self action: @selector(swipe:)
+                                                ];
+		recognizer.direction = UISwipeGestureRecognizerDirectionRight;
+		[self addGestureRecognizer: recognizer];
+        
+		recognizer = [[UISwipeGestureRecognizer alloc]
+                      initWithTarget: self action: @selector(swipe:)
+                      ];
+		recognizer.direction = UISwipeGestureRecognizerDirectionLeft;
+		[self addGestureRecognizer: recognizer];
+        
+		recognizer = [[UISwipeGestureRecognizer alloc]
+                      initWithTarget: self action: @selector(swipe:)
+                      ];
+		recognizer.direction = UISwipeGestureRecognizerDirectionUp;
+		[self addGestureRecognizer: recognizer];
+        
+		recognizer = [[UISwipeGestureRecognizer alloc]
+                      initWithTarget: self action: @selector(swipe:)
+                      ];
+		recognizer.direction = UISwipeGestureRecognizerDirectionDown;
+		[self addGestureRecognizer: recognizer];
+        
 	}
 	return self;
 }
 
-- (void) touchesBegan: (NSSet *) touches withEvent: (UIEvent *) event {
-	/*
-     Assume a swipe has just ended.  A more complicated program could
-     distinguish between left vs. rights wipes, and perform a
-     UIViewAnimationOptionTransitionFlipFromLeft or a
-     UIViewAnimationOptionTransitionFlipFromRight.
-     
-     In UIViewAnimationOptionTransitionFlipFromLeft, the left edge moves
-     to the right, and the right edge moves away from the user and to the
-     left.
-     */
-    
-	NSUInteger newIndex = index;	//toggle the index
-    if(newIndex < 2) {
-        newIndex++;
-    } else {
-        newIndex = 0;
-    }
-    
-	[UIView transitionFromView: [views objectAtIndex: index]
-                        toView: [views objectAtIndex: newIndex]
-                      duration: 2.25
-                       options: UIViewAnimationOptionTransitionFlipFromLeft
-                    completion: NULL
-     ];
-    if(index == 0 || index == 1) {
-        index++;
-    }
-    else if(index == 2) {
-        index = 0;
-    }
 
-}
-- (void) touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
-    [super touchesCancelled:touches withEvent:event];
+- (void) swipe: (UISwipeGestureRecognizer *) recognizer {
+	//CGPoint p = [recognizer locationInView: self];
+    
+	NSString *direction = @"unknown";
+	if (recognizer.direction == UISwipeGestureRecognizerDirectionRight) {
+		direction = @"→";
+        NSUInteger newIndex = index;	//toggle the index
+        if(newIndex < 2) {
+            newIndex++;
+        } else {
+            newIndex = 0;
+        }
+        
+        [UIView transitionFromView: [views objectAtIndex: index]
+                            toView: [views objectAtIndex: newIndex]
+                          duration: 2.25
+                           options: UIViewAnimationOptionTransitionFlipFromLeft
+                        completion: NULL
+         ];
+        if(index == 0 || index == 1) {
+            index++;
+        }
+        else if(index == 2) {
+            index = 0;
+        }
+	} else if (recognizer.direction == UISwipeGestureRecognizerDirectionLeft) {
+		direction = @"←";
+	} else if (recognizer.direction == UISwipeGestureRecognizerDirectionUp) {
+		direction = @"↑";
+	} else if (recognizer.direction == UISwipeGestureRecognizerDirectionDown) {
+		direction = @"↓";
+	}
+
 }
 
 /*

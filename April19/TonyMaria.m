@@ -8,6 +8,7 @@
 
 #import "TonyMaria.h"
 #import "Maria.h"
+#import "Tony.h"
 
 @implementation TonyMaria
 
@@ -18,14 +19,22 @@
         // Initialization code
         self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"westsidestorybackground1.png"]];
         
+        CGFloat w = self.bounds.size.width;
+        CGFloat h = self.bounds.size.height;
+        
         // ADD MARIA TO THE VIEW
         UIImage *maria = [UIImage imageNamed: @"maria.png"];
-        CGRect f = CGRectMake(0, 0, maria.size.width, maria.size.width);
-        mariaView = [[Maria alloc] initWithFrame: f];
+        CGRect fMaria = CGRectMake(0, 0, maria.size.width, maria.size.height);
+        mariaView = [[Maria alloc] initWithFrame: fMaria];
         mariaView.backgroundColor = [UIColor colorWithPatternImage:maria];
         [self addSubview: mariaView];
         
         // ADD TONY TO THE VIEW
+        UIImage *tony = [UIImage imageNamed: @"tony.png"];
+        CGRect fTony = CGRectMake(w-tony.size.width, h-tony.size.height, tony.size.width, tony.size.height);
+        tonyView = [[Tony alloc] initWithFrame: fTony];
+        tonyView.backgroundColor = [UIColor colorWithPatternImage:tony];
+        [self addSubview: tonyView];
         
         // ADD TEXT TO VIEW 
         //Trailing blank to avoid cutting off last letter
@@ -57,10 +66,22 @@
     if (touches.count > 0) {
         UITouch *touch = [touches anyObject];
         CGPoint point = [touch locationInView: self];
-        mariaView.center = point;	//Move the mariaView to a new location.
+       // mariaView.center = point;	//Move the mariaView to a new location.
         
         //Can combine the above three statements to
         //littleView.center = [[touches anyObject] locationInView: self];
+        
+        //tonyView.center = point;
+        
+        
+        if ([touch view] == mariaView) {
+            // move the image view
+            mariaView.center = point;
+        }
+        else if ([touch view] == tonyView) {
+            // move the image view
+            tonyView.center = point;
+        }
     }
 }
 // Only override drawRect: if you perform custom drawing.
@@ -69,8 +90,8 @@
 - (void) drawRect: (CGRect) rect
 {
     // Drawing code
-    [UIView animateWithDuration: 25
-                          delay: 10.75
+    [UIView animateWithDuration: 5
+                          delay: 1
                         options: UIViewAnimationOptionCurveLinear
                      animations: ^{
                          //Move the label far enough to the left

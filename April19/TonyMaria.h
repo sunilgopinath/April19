@@ -8,10 +8,14 @@
 
 #import <UIKit/UIKit.h>
 @class Maria;
+@class Tony;
 
 @interface TonyMaria : UIView {
     Maria *mariaView;
+    Tony *tonyView;
     UILabel *label;
+    // holds the long text
+    UITextView *textView;
 }
 
 
