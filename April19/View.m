@@ -10,6 +10,7 @@
 #import "LittleView.h"
 
 @implementation View
+BOOL bo;
 
 - (id) initWithFrame: (CGRect) frame
 {
@@ -17,7 +18,7 @@
     if (self) {
         // Initialization code
         self.backgroundColor = [UIColor whiteColor];
-        
+        bo = YES;
         //Put the origin at the center of the big view.
 		CGRect b = self.bounds;
         
@@ -55,7 +56,7 @@
                          animations: ^{
                              //This block describes what the animation should do.
                              littleView.center = [[touches anyObject] locationInView: self];
-                             littleView.alpha = 0.0;	//0.0 is transparent, 1.0 is opaque
+                             littleView.backgroundColor = (bo = !bo) ? [UIColor blueColor] : [UIColor greenColor];
                          }
                          completion: NULL
          ];
