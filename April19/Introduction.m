@@ -16,9 +16,9 @@
 	if (self) {
 		// Initialization code
 		textView = [[UITextView alloc] initWithFrame: self.bounds];
-		textView.backgroundColor = [UIColor blackColor];
-		textView.textColor = [UIColor yellowColor];
-		textView.font = [UIFont fontWithName: @"Times New Roman" size: 15.75];
+		textView.textColor = [UIColor whiteColor];
+        textView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"introductionbackground.jpg"]];
+		textView.font = [UIFont fontWithName: @"Georgia" size: 12];
 		textView.editable = NO;	//Don't pop up a keyboard.
 		NSString *fullpath = [[NSBundle mainBundle] pathForResource:@"romeo" ofType:@"txt"];  
         if (fullpath) {  
@@ -30,6 +30,8 @@
             NSLog(@"filepath not found");
         }       
 		[self addSubview: textView];
+        
+        
 	}
 	return self;
 }

@@ -36,7 +36,9 @@
 	</array>
 	<key>CFBundleIconFiles</key>
 	<array>
-		<string>icon.png</string>
+		<string></string>
 	</array>
+	<key>UILaunchImageFile~iphone</key>
+	<string>introductionbackground.jpg</string>
 </dict>
 </plist>

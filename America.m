@@ -16,6 +16,27 @@
 	if (self) {
 		// Initialization code
 		self.backgroundColor = [UIColor whiteColor];
+        
+        NSString *text = @"Womb to tomb!";
+        
+        CGRect b = self.bounds;
+        UIFont *font = [UIFont italicSystemFontOfSize: b.size.height/7];
+        CGSize size = [text sizeWithFont: font];
+        
+        CGRect f = CGRectMake(
+                              b.size.width,
+                              0,
+                              size.width,
+                              size.height
+                              );
+        
+        label = [[UILabel alloc] initWithFrame: f];
+        label.font = font;
+        label.backgroundColor = [UIColor clearColor];
+        label.textColor = [UIColor whiteColor];
+        label.text = text;
+        [self addSubview: label];
+        
 	}
 	return self;
 }
@@ -67,6 +88,25 @@
                                 );
     
 	[riff drawAtPoint: point];
+    
+    
+    // animate the label
+    // Drawing code
+    [UIView animateWithDuration: 10
+                          delay: 5
+                        options: UIViewAnimationOptionCurveLinear
+                     animations: ^{
+                         //Move the label far enough to the left
+                         //so that it's out of the View.
+                         label.center = CGPointMake(
+                                                    -label.bounds.size.width / 2,
+                                                    self.bounds.size.height / 2
+                                                    );
+                         label.alpha = 0.0;
+                     }
+                     completion: NULL
+     ];
+    
 
 }
 

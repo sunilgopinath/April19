@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface America : UIView
+@interface America : UIView {
+    UILabel *label;
+}
 
 @end

@@ -10,6 +10,8 @@
 
 @interface Introduction : UIView {
 	UITextView *textView;
+    UILabel *tony;
+    UILabel *maria;
 }
 
 

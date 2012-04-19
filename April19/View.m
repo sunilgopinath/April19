@@ -99,17 +99,27 @@
         } else {
             newIndex = 3;
         }
+        NSLog(@"index is %i and newIndex is %i", index, newIndex);
+        [UIView transitionFromView: [views objectAtIndex: index]
+                            toView: [views objectAtIndex: newIndex]
+                          duration: 2.25
+                           options: UIViewAnimationOptionTransitionFlipFromRight
+                        completion: NULL
+         ];
+        if(index > 1) {
+            index--;
+        } else {
+            index = views.count - 1 ;
+        }
 	} else if (recognizer.direction == UISwipeGestureRecognizerDirectionUp) {
 		NSLog(@"↑");
         [UIView transitionFromView: [views objectAtIndex: index]
                             toView: [views objectAtIndex: 0]
                           duration: 2.25
-                           options: UIViewAnimationOptionTransitionFlipFromLeft
+                           options: UIViewAnimationOptionTransitionFlipFromBottom
                         completion: NULL
          ];
-        if(index > 1) {
-            
-        }
+
 	} else if (recognizer.direction == UISwipeGestureRecognizerDirectionDown) {
 		NSLog(@"↓");
         [UIView transitionFromView: [views objectAtIndex: index]
