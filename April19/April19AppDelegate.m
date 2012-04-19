@@ -23,6 +23,7 @@
     
     [self.window addSubview: view];
     [self.window makeKeyAndVisible];
+    
     NSBundle *bundle = [NSBundle mainBundle];
     if (bundle == nil) {
         NSLog(@"could not get the main bundle");
@@ -31,7 +32,7 @@
     
     //The path is the filename.
     NSString *path =
-    [bundle pathForResource: @"gone" ofType: @"mp3"];
+    [bundle pathForResource: @"america" ofType: @"mp3"];
     if (path == nil) {
         NSLog(@"could not get the path");
         return YES;

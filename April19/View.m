@@ -17,7 +17,7 @@
     self = [super initWithFrame: frame];
     if (self) {
         // Initialization code
-        self.backgroundColor = [UIColor whiteColor];
+        self.backgroundColor = [UIColor blueColor];
         
         //Put the origin at the center of the big view.
 		CGRect b = self.bounds;
@@ -40,11 +40,11 @@
                               h
                               );
         littleView = [[LittleView alloc] initWithFrame: f];
-        [self addSubview: littleView];
+        //[self addSubview: littleView];
         
-        NSString *string = @"Hello, World!";
-		UIFont *font = [UIFont systemFontOfSize: 32];
-		CGSize size = [string sizeWithFont: font];
+        NSString *text = @"I like to be in america ";
+        UIFont *font = [UIFont italicSystemFontOfSize: b.size.height/3];
+        CGSize size = [text sizeWithFont: font];
 
         
         CGRect f1 = CGRectMake(
@@ -54,11 +54,12 @@
                               size.height
                               );
         
-		label = [[UILabel alloc] initWithFrame: f1];
-		label.backgroundColor = [UIColor yellowColor];
-		label.font = font;
-		label.text = string;
-		[self addSubview: label];
+        label = [[UILabel alloc] initWithFrame: f1];
+        label.font = font;
+        label.backgroundColor = [UIColor clearColor];
+        label.textColor = [UIColor whiteColor];
+        label.text = text;
+        [self addSubview: label];
     }
     return self;
 }
@@ -87,12 +88,25 @@
     [super touchesCancelled:touches withEvent:event];
 }
 
-/*
+
  // Only override drawRect: if you perform custom drawing.
  // An empty implementation adversely affects performance during animation.
  - (void) drawRect: (CGRect) rect
  {
- // Drawing code
+     // Drawing code
+     [UIView animateWithDuration: 25
+                           delay: 10.75
+                         options: UIViewAnimationOptionCurveLinear
+                      animations: ^{
+                          //Move the label far enough to the left
+                          //so that it's out of the View.
+                          label.center = CGPointMake(
+                                                     -label.bounds.size.width / 2,
+                                                     self.bounds.size.height / 2
+                                                     );
+                      }
+                      completion: NULL
+      ];
  }
- */
+
 @end
