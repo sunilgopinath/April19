@@ -55,6 +55,7 @@
                          animations: ^{
                              //This block describes what the animation should do.
                              littleView.center = [[touches anyObject] locationInView: self];
+                             littleView.alpha = 0.0;	//0.0 is transparent, 1.0 is opaque
                          }
                          completion: NULL
          ];
